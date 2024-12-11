@@ -11,7 +11,8 @@ import requests
 from openai import OpenAI
 
 # API-key
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+#openai.api_key = os.environ.get("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY_2")
 
 # задаем system
 default_system = "Ты-консультант в компании Simble, ответь на вопрос клиента на основе документа с информацией. Не придумывай ничего от себя, отвечай максимально по документу. Не упоминай Документ с информацией для ответа клиенту. Клиент ничего не должен знать про Документ с информацией для ответа клиенту"

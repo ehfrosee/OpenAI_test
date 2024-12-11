@@ -2,7 +2,10 @@ import openai
 from openai import OpenAI
 import os
 
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+#openai.api_key = os.environ.get("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY_2")
+#openai.api_key = os.environ.get("OPENAI_API_KEY_2")
+
 client = OpenAI()
 completion = client.chat.completions.create(
     model="gpt-4o-mini",
@@ -16,3 +19,7 @@ completion = client.chat.completions.create(
 )
 
 print(completion.choices[0].message)
+
+# pip freeze > 1.txt
+# pip uninstall -y -r 1.txt
+
